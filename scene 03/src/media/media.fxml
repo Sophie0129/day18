@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.media.MediaView?>
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="media.Controller">
+   <children>
+      <ListView fx:id="listView" layoutX="333.0" layoutY="79.0" prefHeight="200.0" prefWidth="153.0" />
+      <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="300.0" layoutX="20.0" layoutY="79.0" />
+      <HBox layoutX="29.0" layoutY="296.0" prefHeight="51.0" prefWidth="283.0" spacing="20.0">
+         <children>
+            <Button fx:id="btnPlay" mnemonicParsing="false" onAction="#playFunc" prefHeight="36.0" prefWidth="80.0" text="Play" />
+            <Button fx:id="btnPause" mnemonicParsing="false" onAction="#pauseFunc" prefHeight="36.0" prefWidth="80.0" text="Pause" />
+            <Button fx:id="btnStop" mnemonicParsing="false" onAction="#stopFunc" prefHeight="36.0" prefWidth="80.0" text="Stop" />
+         </children>
+      </HBox>
+      <Label layoutX="29.0" layoutY="340.0" text="시간 " />
+      <ProgressBar fx:id="progressBar" layoutX="29.0" layoutY="363.0" prefHeight="7.0" prefWidth="253.0" progress="0.0" />
+      <ProgressIndicator fx:id="progressIndicator" layoutX="298.0" layoutY="348.0" progress="0.0" />
+      <Label fx:id="labelTime" layoutX="245.0" layoutY="370.0" text="0/0 sec" />
+      <Label layoutX="340.0" layoutY="340.0" prefWidth="29.0" text="소리" />
+      <Slider fx:id="sliderVolume" layoutX="340.0" layoutY="360.0" onMouseDragged="#sliderFunc" prefWidth="140.0" showTickMarks="true" snapToTicks="true" />
+   </children>
+</AnchorPane>
